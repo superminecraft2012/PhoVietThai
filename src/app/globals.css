@@ -1,0 +1,287 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   DESIGN TOKENS — Pho Viet Thai Brand System
+   ───────────────────────────────────────────────────────────────────────────── */
+:root {
+  --lacquer-red: #B5231A;
+  --lacquer-red-dark: #C4291F;
+  --turmeric-gold: #D4921A;
+  --turmeric-gold-light: #E8A520;
+  --deep-jade: #1A4A3A;
+  --deep-jade-light: #1E5542;
+  --warm-ivory: #FAF5E8;
+  --warm-ivory-dark: #F5EFD8;
+  --rich-charcoal: #1C1C1C;
+  --rich-charcoal-light: #242424;
+  --soft-cream: #EDE5CC;
+
+  /* Spacing scale */
+  --section-pad-y: clamp(4rem, 8vw, 7rem);
+  --container-max: 1280px;
+  --container-pad: clamp(1.25rem, 5vw, 3rem);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   BASE RESETS
+   ───────────────────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  color: var(--rich-charcoal);
+  background-color: var(--warm-ivory);
+  line-height: 1.75;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   TYPOGRAPHY
+   ───────────────────────────────────────────────────────────────────────────── */
+.font-display,
+h1, h2, h3 {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   GEOMETRIC PATTERN STRIP — used as section dividers
+   SVG data URI: diamond lattice motif in lacquer red at 30% opacity
+   ───────────────────────────────────────────────────────────────────────────── */
+.pattern-strip {
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14'%3E%3Cpath d='M14 0 L28 7 L14 14 L0 7 Z' fill='none' stroke='%23B5231A' stroke-width='1' opacity='0.3'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 28px 14px;
+}
+
+.pattern-strip-gold {
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14'%3E%3Cpath d='M14 0 L28 7 L14 14 L0 7 Z' fill='none' stroke='%23D4921A' stroke-width='1' opacity='0.4'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 28px 14px;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   DIAGONAL WOVEN TEXTURE — for dark jade/charcoal sections
+   ───────────────────────────────────────────────────────────────────────────── */
+.texture-woven {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 8px,
+    rgba(255, 255, 255, 0.03) 8px,
+    rgba(255, 255, 255, 0.03) 10px
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   BUTTON SYSTEM
+   ───────────────────────────────────────────────────────────────────────────── */
+@layer components {
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center px-7 py-3.5
+           font-body font-semibold text-sm tracking-wide
+           text-warmIvory bg-lacquerRed
+           overflow-hidden transition-all duration-200
+           hover:bg-lacquerRed-dark;
+  }
+
+  .btn-primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--lacquer-red-dark);
+    transform: translateY(100%);
+    transition: transform 200ms ease;
+  }
+
+  .btn-primary:hover::after {
+    transform: translateY(0);
+  }
+
+  .btn-primary span {
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-7 py-3.5
+           font-body font-semibold text-sm tracking-wide
+           border border-turmericGold text-turmericGold
+           hover:bg-turmericGold hover:text-warmIvory
+           transition-all duration-200;
+  }
+
+  .btn-outline-ivory {
+    @apply inline-flex items-center justify-center px-7 py-3.5
+           font-body font-semibold text-sm tracking-wide
+           border border-warmIvory text-warmIvory
+           hover:bg-warmIvory hover:text-richCharcoal
+           transition-all duration-200;
+  }
+
+  /* Gold rule beneath section headings */
+  .heading-rule {
+    @apply block w-12 h-0.5 bg-turmericGold mt-3 mb-6;
+  }
+
+  .container-site {
+    @apply max-w-[1280px] mx-auto px-[clamp(1.25rem,5vw,3rem)];
+  }
+
+  /* Nav underline hover effect — gold draws left to right */
+  .nav-link {
+    @apply relative font-body text-sm font-medium text-richCharcoal
+           transition-colors duration-200 hover:text-lacquerRed;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--turmeric-gold);
+    transition: width 250ms ease;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  .nav-link.active {
+    @apply text-lacquerRed;
+  }
+
+  /* Menu item card base */
+  .menu-item-card {
+    @apply py-4 border-b border-softCream last:border-0;
+  }
+
+  /* Badge styles */
+  .badge-house-special {
+    @apply inline-flex items-center gap-1 px-2 py-0.5
+           text-xs font-body font-semibold text-deepJade
+           bg-turmericGold/20 border border-turmericGold/40;
+  }
+
+  .badge-raw-meat {
+    @apply inline-flex items-center gap-1 px-2 py-0.5
+           text-xs font-body font-semibold text-lacquerRed
+           bg-lacquerRed/10 border border-lacquerRed/30;
+  }
+
+  .badge-promo {
+    @apply inline-flex items-center gap-1 px-2 py-0.5
+           text-xs font-body font-semibold text-turmericGold
+           bg-turmericGold/10 border border-turmericGold/30;
+  }
+
+  .badge-vegan {
+    @apply inline-flex items-center gap-1 px-2 py-0.5
+           text-xs font-body font-semibold text-deepJade
+           bg-deepJade/10 border border-deepJade/30;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   GLOBE GLOW — warm amber radial glow for jade / dark sections
+   ───────────────────────────────────────────────────────────────────────────── */
+.globe-glow {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    rgba(212, 146, 26, 0.12) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   PAGE TRANSITION OVERLAY
+   ───────────────────────────────────────────────────────────────────────────── */
+.page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--warm-ivory);
+  border-top: 3px solid var(--lacquer-red);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   MOBILE MENU OVERLAY
+   ───────────────────────────────────────────────────────────────────────────── */
+.mobile-menu-overlay {
+  background: var(--deep-jade);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   CUSTOM SCROLLBAR
+   ───────────────────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--soft-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--turmeric-gold);
+  border-radius: 3px;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SELECTION
+   ───────────────────────────────────────────────────────────────────────────── */
+::selection {
+  background: var(--turmeric-gold);
+  color: var(--warm-ivory);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   MENU CATEGORY TABS — sticky nav on menu page
+   ───────────────────────────────────────────────────────────────────────────── */
+.category-tab {
+  @apply whitespace-nowrap px-4 py-2.5 font-body text-sm font-medium
+         text-richCharcoal/70 border-b-2 border-transparent
+         hover:text-richCharcoal transition-all duration-200 cursor-pointer;
+}
+
+.category-tab.active {
+  @apply text-lacquerRed border-lacquerRed;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   FORM INPUTS
+   ───────────────────────────────────────────────────────────────────────────── */
+.form-input {
+  @apply w-full px-0 py-3
+         bg-transparent border-0 border-b-2 border-softCream
+         font-body text-sm text-richCharcoal
+         placeholder:text-richCharcoal/40
+         focus:outline-none focus:border-lacquerRed
+         transition-colors duration-200;
+}
+
+.form-label {
+  @apply block font-body text-xs font-semibold tracking-widest
+         text-richCharcoal/50 uppercase mb-1;
+}
