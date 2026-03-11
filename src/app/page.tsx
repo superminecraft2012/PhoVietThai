@@ -67,7 +67,7 @@ function HeroSection() {
           </h1>
 
           <p className="font-display italic text-xl sm:text-2xl text-turmericGold mb-10 leading-snug">
-            "Two Cuisines. One Bowl."
+            &quot;Two Cuisines. One Bowl.&quot;
           </p>
 
           <p className="font-body text-warmIvory/75 text-base md:text-lg mb-10 leading-relaxed max-w-lg">
@@ -346,17 +346,17 @@ function AboutTeaser() {
               <div className="space-y-4 font-body text-richCharcoal/70 text-base leading-relaxed">
                 <p>
                   Pho Viet Thai has been feeding Lakewood the honest way — big portions,
-                  fair prices, and a broth that's been going since morning. The dining room
+                  fair prices, and a broth that&apos;s been going since morning. The dining room
                   feels lived in. Warm wood, globe pendant lights, and enough tropical
-                  plants to make you forget you're in a strip mall.
+                  plants to make you forget you&apos;re in a strip mall.
                 </p>
                 <p>
-                  The menu runs two cuisines without pretending they're the same thing.
+                  The menu runs two cuisines without pretending they&apos;re the same thing.
                   Vietnamese pho — slow-built, clear, and rich. Thai curries and noodles
                   that let the spice scale do its job. Both done well under one roof.
                 </p>
                 <p>
-                  If you've been here before, you know. If you haven't — start with
+                  If you&apos;ve been here before, you know. If you haven&apos;t — start with
                   the Thai Tom Yum Pho and the Garlic Pepper Wings, and work from there.
                 </p>
               </div>
@@ -601,7 +601,7 @@ function ReviewsStrip() {
                   ))}
                 </div>
                 <p className="font-display italic text-base text-warmIvory/80 leading-relaxed mb-4">
-                  "{review.quote}"
+                  &quot;{review.quote}&quot;
                 </p>
                 <footer>
                   <cite className="font-body text-xs text-warmIvory/40 not-italic">

@@ -46,7 +46,7 @@ function ContactHero() {
           </h1>
           <span className="block w-12 h-0.5 bg-turmericGold mt-2 mb-5" />
           <p className="font-body text-richCharcoal/65 text-base max-w-lg leading-relaxed">
-            Questions, reservations, catering, or just want to say hi — we're here.
+            Questions, reservations, catering, or just want to say hi — we&apos;re here.
           </p>
         </SectionEntrance>
       </div>
@@ -235,8 +235,8 @@ function ContactForm() {
 
         <h2 className="font-display text-2xl text-richCharcoal">Message sent.</h2>
         <p className="font-body text-sm text-richCharcoal/65 leading-relaxed max-w-sm">
-          Thanks for reaching out. We'll get back to you soon. In the meantime,
-          the kitchen's open until 11 PM.
+          Thanks for reaching out. We&apos;ll get back to you soon. In the meantime,
+          the kitchen&apos;s open until 11 PM.
         </p>
         <button
           onClick={() => setSubmitted(false)}

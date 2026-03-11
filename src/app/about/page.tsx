@@ -79,9 +79,9 @@ function StorySection() {
               </p>
 
               <p>
-                Vietnamese and Thai cooking share more than they don't. Aromatic broths.
-                Fresh herbs that matter. Heat that's earned, not just applied. Layered
-                flavors built over time. But they're distinct — and here, both are done
+                Vietnamese and Thai cooking share more than they don&apos;t. Aromatic broths.
+                Fresh herbs that matter. Heat that&apos;s earned, not just applied. Layered
+                flavors built over time. But they&apos;re distinct — and here, both are done
                 with their own care. The pho broth has been going since the morning. The
                 Thai curries are built from scratch. Nothing here comes from a packet.
               </p>
@@ -90,7 +90,7 @@ function StorySection() {
                 The dining room reflects how the food feels: warm, casual, and genuinely
                 comfortable. Dark wood tables. Globe pendant lights that cast the right
                 kind of glow. Tropical plants throughout — not as decoration but as part
-                of the atmosphere. It's a space that's been used and loved, and it shows.
+                of the atmosphere. It&apos;s a space that&apos;s been used and loved, and it shows.
               </p>
 
               <p>
@@ -104,7 +104,7 @@ function StorySection() {
 
               <p>
                 Lakewood has given this place its regulars, and those regulars have given
-                it its reputation. Budget-friendly doesn't mean cutting corners — it means
+                it its reputation. Budget-friendly doesn&apos;t mean cutting corners — it means
                 treating people right. Generous portions, consistent quality, and a staff
                 that knows the menu because they eat here too.
               </p>
@@ -115,14 +115,14 @@ function StorySection() {
               className="my-10 font-display italic text-xl sm:text-2xl text-lacquerRed leading-snug
                          border-l-2 border-turmericGold pl-6 -ml-6 md:ml-0 md:pl-6"
             >
-              "The broth has been going since morning. Nothing here comes from a packet."
+              &quot;The broth has been going since morning. Nothing here comes from a packet.&quot;
             </blockquote>
 
             <div className="font-body text-richCharcoal/75 text-base leading-[1.85]">
               <p>
                 Open daily, 11 AM to 11 PM. Dine in, take out, or order delivery through
                 DoorDash, Uber Eats, or directly at ordervietthai.com. However you get
-                here — the food's ready when you are.
+                here — the food&apos;s ready when you are.
               </p>
             </div>
           </SectionEntrance>

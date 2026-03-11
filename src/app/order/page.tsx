@@ -294,7 +294,7 @@ function DeliveryNote() {
             <p className="font-body text-sm text-warmIvory/60 leading-relaxed mb-8">
               We deliver through DoorDash and Uber Eats across Lakewood, parts of Tacoma,
               and surrounding neighborhoods. Delivery zones depend on the platform — check
-              your address at checkout. For pickup, we're at{' '}
+              your address at checkout. For pickup, we&apos;re at{' '}
               <span className="text-warmIvory/80">3615 Steilacoom Blvd SW, Suite 102</span>,
               open daily from 11 AM to 11 PM.
             </p>

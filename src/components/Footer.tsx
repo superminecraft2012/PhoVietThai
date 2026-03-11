@@ -60,7 +60,7 @@ export function Footer() {
               Pho Viet Thai
             </Link>
             <p className="font-display italic text-warmIvory/50 text-sm mb-6">
-              "Two Cuisines. One Bowl."
+              &quot;Two Cuisines. One Bowl.&quot;
             </p>
 
             <address className="not-italic space-y-2 font-body text-sm text-warmIvory/70">
