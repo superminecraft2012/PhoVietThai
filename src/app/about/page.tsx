@@ -7,7 +7,7 @@ import { SectionEntrance, StaggerContainer, StaggerItem } from '@/components/ui/
 export const metadata: Metadata = {
   title: 'Our Story',
   description:
-    'Pho Viet Thai — a Vietnamese and Thai restaurant in Lakewood, WA. Real food, honest prices, and the kind of place you come back to twice a week.',
+    'Pho Viet Thai, a Vietnamese and Thai restaurant in Lakewood, WA. Real food, honest prices, and the kind of place you come back to twice a week.',
 }
 
 export default function AboutPage() {
@@ -15,7 +15,6 @@ export default function AboutPage() {
     <>
       <AboutHero />
       <StorySection />
-      <InteriorGallery />
       <WhyPhoVietThai />
       <HoursAndLocation />
     </>
@@ -71,7 +70,7 @@ function StorySection() {
             <div className="font-body text-richCharcoal/75 text-base leading-[1.85] space-y-5">
               <p>
                 Pho Viet Thai started the way most neighborhood restaurants worth anything
-                do — with a specific idea about what good food should feel like, and a
+                do, with a specific idea about what good food should feel like, and a
                 room to make it happen in. The room turned out to be here, on Steilacoom
                 Boulevard in Lakewood. The idea turned out to be this: serve two cuisines
                 that belong in the same conversation, do it honestly, and let the food
@@ -81,7 +80,7 @@ function StorySection() {
               <p>
                 Vietnamese and Thai cooking share more than they don&apos;t. Aromatic broths.
                 Fresh herbs that matter. Heat that&apos;s earned, not just applied. Layered
-                flavors built over time. But they&apos;re distinct — and here, both are done
+                flavors built over time. But they&apos;re distinct, and here, both are done
                 with their own care. The pho broth has been going since the morning. The
                 Thai curries are built from scratch. Nothing here comes from a packet.
               </p>
@@ -89,7 +88,7 @@ function StorySection() {
               <p>
                 The dining room reflects how the food feels: warm, casual, and genuinely
                 comfortable. Dark wood tables. Globe pendant lights that cast the right
-                kind of glow. Tropical plants throughout — not as decoration but as part
+                kind of glow. Tropical plants throughout, not as decoration but as part
                 of the atmosphere. It&apos;s a space that&apos;s been used and loved, and it shows.
               </p>
 
@@ -104,7 +103,7 @@ function StorySection() {
 
               <p>
                 Lakewood has given this place its regulars, and those regulars have given
-                it its reputation. Budget-friendly doesn&apos;t mean cutting corners — it means
+                it its reputation. Budget-friendly doesn&apos;t mean cutting corners. It means
                 treating people right. Generous portions, consistent quality, and a staff
                 that knows the menu because they eat here too.
               </p>
@@ -122,7 +121,7 @@ function StorySection() {
               <p>
                 Open daily, 11 AM to 11 PM. Dine in, take out, or order delivery through
                 DoorDash, Uber Eats, or directly at ordervietthai.com. However you get
-                here — the food&apos;s ready when you are.
+                here. The food&apos;s ready when you are.
               </p>
             </div>
           </SectionEntrance>
@@ -155,94 +154,6 @@ function StorySection() {
             </div>
           </SectionEntrance>
         </div>
-      </div>
-    </section>
-  )
-}
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   INTERIOR GALLERY — 3-column asymmetric photo grid
-   ───────────────────────────────────────────────────────────────────────────── */
-function InteriorGallery() {
-  const photos = [
-    {
-      label: 'The Dining Room',
-      placeholder: 'Interior dining room wide shot — tables, globe lights overhead — 600×500px',
-      width: 600,
-      height: 500,
-      alt: 'Pho Viet Thai dining room wide view',
-    },
-    {
-      label: 'The Globe Lights',
-      placeholder: 'Globe pendant lights detail shot — warm amber glow — 600×700px',
-      width: 600,
-      height: 700,
-      alt: 'Globe pendant lights at Pho Viet Thai',
-    },
-    {
-      label: 'Our Plants',
-      placeholder: 'Tropical indoor plants detail — lush greenery in dining room — 600×500px',
-      width: 600,
-      height: 500,
-      alt: 'Indoor tropical plants at Pho Viet Thai',
-    },
-  ]
-
-  return (
-    <section
-      className="py-[var(--section-pad-y)] bg-softCream relative overflow-hidden"
-      aria-labelledby="gallery-heading"
-    >
-      <div className="container-site">
-        <SectionEntrance>
-          <h2
-            id="gallery-heading"
-            className="font-display text-3xl sm:text-4xl md:text-5xl text-richCharcoal mb-2"
-          >
-            The Space
-          </h2>
-          <span className="block w-12 h-0.5 bg-turmericGold mt-3 mb-12" />
-        </SectionEntrance>
-
-        <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 items-start">
-          {photos.map((photo, i) => (
-            <StaggerItem
-              key={photo.label}
-              className={i === 1 ? 'md:mt-10' : ''}
-            >
-              <div className="group relative overflow-hidden">
-                {/* PLACEHOLDER: [photo.placeholder] — replace with real interior photo */}
-                <PlaceholderImg
-                  alt={photo.alt}
-                  width={photo.width}
-                  height={photo.height}
-                  label={photo.placeholder}
-                  className="w-full transition-transform duration-500 group-hover:scale-105"
-                />
-
-                {/* Warm overlay */}
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{
-                    background:
-                      'radial-gradient(ellipse at 50% 50%, rgba(181, 35, 26, 0.12) 0%, transparent 70%)',
-                  }}
-                  aria-hidden="true"
-                />
-
-                {/* Label */}
-                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-richCharcoal/60 to-transparent">
-                  <p className="font-body text-xs font-semibold text-warmIvory">
-                    {photo.label}
-                  </p>
-                </div>
-
-                {/* Turmeric gold top rule */}
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-turmericGold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
       </div>
     </section>
   )

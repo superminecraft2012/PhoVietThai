@@ -23,7 +23,7 @@ interface PlaceholderImgProps {
  *
  * Example replacement:
  *   import Image from 'next/image'
- *   <Image src="/images/hero-banner.jpg" alt="..." fill className="object-cover" />
+ *   <Image src="/images/hero-banner.webp" alt="..." fill className="object-cover" />
  */
 export function PlaceholderImg({
   alt,

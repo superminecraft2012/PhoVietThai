@@ -22,7 +22,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Pho Viet Thai — Vietnamese & Thai Restaurant in Lakewood, WA',
+    default: 'Pho Viet Thai | Vietnamese & Thai Restaurant in Lakewood, WA',
     template: '%s | Pho Viet Thai',
   },
   description:
@@ -40,15 +40,15 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Pho Viet Thai',
-    title: 'Pho Viet Thai — Two Cuisines. One Bowl.',
+    title: 'Pho Viet Thai | Two Cuisines. One Bowl.',
     description:
       'Vietnamese and Thai food in Lakewood, WA. Rich pho, garlic pepper wings, fresh curries. Open daily 11AM–11PM.',
     /* PLACEHOLDER: OG image — 1200×630px — branded social share image — replace with real photo */
-    images: [{ url: '/images/og-image.jpg', width: 1200, height: 630, alt: 'Pho Viet Thai' }],
+    images: [{ url: '/images/og-image.webp', width: 1200, height: 630, alt: 'Pho Viet Thai' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pho Viet Thai — Two Cuisines. One Bowl.',
+    title: 'Pho Viet Thai | Two Cuisines. One Bowl.',
     description: 'Vietnamese and Thai food in Lakewood, WA. Open daily 11AM–11PM.',
   },
   robots: { index: true, follow: true },

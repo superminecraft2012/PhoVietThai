@@ -29,7 +29,7 @@ function HeroSection() {
           globe pendant lights visible, lush plants in background — replace with real photo */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero.jpg"
+          src="/images/hero.webp"
           alt="Pho Viet Thai dining room interior"
           fill
           className="object-cover"
@@ -183,14 +183,14 @@ function SignatureDishes() {
           {/* Large card — Thai Tom Yum Pho (house signature) */}
           <StaggerItem className="md:col-span-2">
             <DishCard
-              imageSrc="/images/photo2.jpg"
+              imageSrc="/images/photo2.webp"
               imagePlaceholder={{
                 label: 'Thai Tom Yum Pho Noodle Soup — overhead shot, steam visible — 800×600px',
                 width: 800,
                 height: 520,
               }}
               name="Thai Tom Yum Pho Noodle Soup"
-              description="Rich, aromatic broth with the tangy heat of Tom Yum — this is what people talk about on the way home."
+              description="Rich, aromatic broth with the tangy heat of Tom Yum. This is what people talk about on the way home."
               price="$15.95"
               badge="House Signature"
               large
@@ -200,7 +200,7 @@ function SignatureDishes() {
           {/* Two smaller cards stacked */}
           <StaggerItem className="flex flex-col gap-5 md:gap-6">
             <DishCard
-              imageSrc="/images/photo3.jpg"
+              imageSrc="/images/photo3.webp"
               imagePlaceholder={{
                 label: 'Garlic and Pepper Wing — close-up, crispy texture — 600×400px',
                 width: 600,
@@ -211,14 +211,14 @@ function SignatureDishes() {
               price="$8.95"
             />
             <DishCard
-              imageSrc="/images/photo5.jpg"
+              imageSrc="/images/photo5.webp"
               imagePlaceholder={{
                 label: 'House Special Pho — all beef cuts, overhead shot — 600×400px',
                 width: 600,
                 height: 360,
               }}
               name="House Special Pho"
-              description="Every cut of beef in one bowl — steak, brisket, tendon, tripe, and meatball. The full experience."
+              description="Every cut of beef in one bowl: steak, brisket, tendon, tripe, and meatball. The full experience."
               price="$13.95"
               badge="House Special"
             />
@@ -345,18 +345,18 @@ function AboutTeaser() {
 
               <div className="space-y-4 font-body text-richCharcoal/70 text-base leading-relaxed">
                 <p>
-                  Pho Viet Thai has been feeding Lakewood the honest way — big portions,
+                  Pho Viet Thai has been feeding Lakewood the honest way: big portions,
                   fair prices, and a broth that&apos;s been going since morning. The dining room
                   feels lived in. Warm wood, globe pendant lights, and enough tropical
                   plants to make you forget you&apos;re in a strip mall.
                 </p>
                 <p>
                   The menu runs two cuisines without pretending they&apos;re the same thing.
-                  Vietnamese pho — slow-built, clear, and rich. Thai curries and noodles
+                  Vietnamese pho, slow-built, clear, and rich. Thai curries and noodles
                   that let the spice scale do its job. Both done well under one roof.
                 </p>
                 <p>
-                  If you&apos;ve been here before, you know. If you haven&apos;t — start with
+                  If you&apos;ve been here before, you know. If you haven&apos;t, start with
                   the Thai Tom Yum Pho and the Garlic Pepper Wings, and work from there.
                 </p>
               </div>
@@ -370,15 +370,13 @@ function AboutTeaser() {
           {/* Interior photo */}
           <SectionEntrance delay={0.15}>
             <div className="relative">
-              {/* PLACEHOLDER: Interior dining — 800×600px — dining room with globe pendant lights,
-                  warm ambient lighting, tropical plants visible — replace with real photo */}
               <div className="relative overflow-hidden">
-                <PlaceholderImg
+                <Image
+                  src="/images/hero.webp"
                   alt="Pho Viet Thai dining room interior"
                   width={800}
                   height={600}
-                  label="Dining room interior — globe pendant lights, tropical plants — 800×600px"
-                  className="w-full"
+                  className="w-full object-cover"
                 />
                 {/* Warm overlay */}
                 <div
@@ -405,131 +403,70 @@ function AboutTeaser() {
    DRINKS HIGHLIGHT — Full-width deep jade, three drink cards
    ───────────────────────────────────────────────────────────────────────────── */
 function DrinksHighlight() {
-  const drinks = [
-    {
-      imagePlaceholder: {
-        label: 'Vietnamese Iced Coffee with Salted Creme — 400×500px',
-        width: 400,
-        height: 500,
-      },
-      name: 'Vietnamese Iced Coffee',
-      subtitle: 'with Salted Creme',
-      description:
-        'Dark, strong, cold. Traditional Vietnamese drip coffee over ice, finished with a salted cream top. This one is not optional.',
-      price: '$5.95',
-      imageSrc: '/images/drink1.jpg',
-    },
-    {
-      imagePlaceholder: {
-        label: 'Bubble Tea 24oz — tall glass with boba — 400×500px',
-        width: 400,
-        height: 500,
-      },
-      name: 'Bubble Tea',
-      subtitle: '24 oz · Most popular',
-      description:
-        "House-made, 24 ounces, priced right. It's the most-ordered drink for a reason.",
-      price: '$7.50',
-      imageSrc: '/images/drink4.jpg',
-    },
-    {
-      imagePlaceholder: {
-        label: 'Thai Matcha with half and half — 400×500px',
-        width: 400,
-        height: 500,
-      },
-      name: 'Thai Matcha',
-      subtitle: 'House-brewed · 24 oz',
-      description:
-        'House-whisked Thai matcha with creamy half and half poured over the top. Earthy, smooth, and just the right amount of rich.',
-      price: '$6.50',
-      imageSrc: '/images/drink2.jpg',
-    },
-  ]
-
   return (
     <section
       className="py-[var(--section-pad-y)] bg-deepJade texture-woven relative overflow-hidden"
       aria-labelledby="drinks-heading"
     >
-      {/* Globe glow effects */}
       <GlobeLightGlow size={600} intensity="medium" className="top-0 left-1/4" />
       <GlobeLightGlow size={400} intensity="subtle" className="bottom-0 right-1/4" />
 
       <PatternBorder variant="gold" className="absolute top-0 left-0 right-0" />
 
       <div className="container-site relative z-10">
-        <SectionEntrance>
-          <h2
-            id="drinks-heading"
-            className="font-display text-3xl sm:text-4xl md:text-5xl text-warmIvory mb-2"
-          >
-            Something to Drink
-          </h2>
-          <span className="block w-12 h-0.5 bg-turmericGold mt-3 mb-6" />
-          <p className="font-body text-warmIvory/60 text-base max-w-md mb-12 leading-relaxed">
-            The Vietnamese iced coffee with salted creme is the one people regret skipping.
-          </p>
-        </SectionEntrance>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+          {/* Text block */}
+          <SectionEntrance>
+            <h2
+              id="drinks-heading"
+              className="font-display text-3xl sm:text-4xl md:text-5xl text-warmIvory mb-2"
+            >
+              Something to Drink
+            </h2>
+            <span className="block w-12 h-0.5 bg-turmericGold mt-3 mb-8" />
 
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
-          {drinks.map((drink) => (
-            <StaggerItem key={drink.name}>
-              <article className="group">
-                <div className="relative overflow-hidden mb-4">
-                  {drink.imageSrc ? (
-                    <Image
-                      src={drink.imageSrc}
-                      alt={drink.name}
-                      width={drink.imagePlaceholder.width}
-                      height={drink.imagePlaceholder.height}
-                      className="w-full transition-transform duration-500 group-hover:scale-105"
-                    />
-                  ) : (
-                    <>
-                      {/* PLACEHOLDER: [drink.imagePlaceholder.label] — replace with real photo */}
-                      <PlaceholderImg
-                        alt={drink.name}
-                        width={drink.imagePlaceholder.width}
-                        height={drink.imagePlaceholder.height}
-                        label={drink.imagePlaceholder.label}
-                        className="w-full transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </>
-                  )}
-                  {/* Subtle warm overlay */}
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      background:
-                        'radial-gradient(ellipse at 50% 30%, rgba(212, 146, 26, 0.08) 0%, transparent 70%)',
-                    }}
-                    aria-hidden="true"
-                  />
-                </div>
+            <div className="space-y-5 font-body text-warmIvory/65 text-base leading-relaxed">
+              <p>
+                The drink menu here pulls its weight. Vietnamese iced coffee brewed dark
+                and slow, finished with a salted cream top that changes the whole thing.
+                House-made bubble tea in 24-ounce cups. The kind of size and flavor that
+                made it the most-ordered drink on the menu.
+              </p>
+              <p>
+                Thai matcha whisked in-house with creamy half and half poured over the top.
+                Earthy, smooth, and rich without being heavy. There are fruit teas, smoothies,
+                and enough options to keep things interesting whether you come once a week
+                or every day.
+              </p>
+            </div>
 
-                <div className="flex items-start justify-between gap-2 mb-1">
-                  <h3 className="font-display text-xl text-warmIvory">{drink.name}</h3>
-                  <span className="font-body font-semibold text-turmericGold shrink-0">
-                    {drink.price}
-                  </span>
-                </div>
-                <p className="font-body text-xs text-turmericGold/80 uppercase tracking-wider mb-3">
-                  {drink.subtitle}
-                </p>
-                <p className="font-body text-sm text-warmIvory/55 leading-relaxed">
-                  {drink.description}
-                </p>
-              </article>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+            <Link href="/menu#drinks" className="btn-outline-ivory px-8 py-3.5 text-sm mt-8 inline-flex">
+              View Drinks Menu
+            </Link>
+          </SectionEntrance>
 
-        <SectionEntrance delay={0.2} className="mt-10 text-center">
-          <Link href="/menu#drinks" className="btn-outline-ivory px-8 py-3.5 text-sm">
-            View Drinks Menu
-          </Link>
-        </SectionEntrance>
+          {/* Image */}
+          <SectionEntrance delay={0.15}>
+            <div className="relative overflow-hidden">
+              <Image
+                src="/images/drinks.webp"
+                alt="Featured drinks at Pho Viet Thai"
+                width={800}
+                height={600}
+                className="w-full object-cover"
+              />
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    'radial-gradient(ellipse at 50% 30%, rgba(212, 146, 26, 0.08) 0%, transparent 70%)',
+                }}
+                aria-hidden="true"
+              />
+              <div className="absolute top-0 left-0 right-0 h-0.5 bg-turmericGold" />
+            </div>
+          </SectionEntrance>
+        </div>
       </div>
 
       <PatternBorder variant="gold" className="absolute bottom-0 left-0 right-0" />
@@ -545,20 +482,20 @@ function ReviewsStrip() {
     {
       stars: 5,
       quote:
-        "The Thai Tom Yum Pho is incredible. The broth has this perfect balance of heat and tang. I've been coming every week for three months.",
-      reviewer: 'Google Reviewer',
+        "I drove 35 min because I was craving this brisket pho broth.. I love the pepper garlic chicken wings, it\u2019s a must.. my server Tan was on it, he is super nice and helpful.. Everything was fire! Ambiance was clean and super chill vibe. I\u2019ll be back for sure!",
+      reviewer: 'Marisa Canne',
     },
     {
       stars: 5,
       quote:
-        'Garlic pepper wings are seriously the best in Lakewood. Crispy outside, juicy inside, and that garlic hits right. Order double.',
-      reviewer: 'Google Reviewer',
+        "A cool hidden gem, and best tasting broth I\u2019ve ever had! I got the Thai Tom Yum Pho and the flavor combinations are incredible \u2014 the perfect balance of acidity, sweetness, savory. Veggies are always fresh and delicious. Spring rolls are super good and banh mi as well.",
+      reviewer: 'Logan Maltese',
     },
     {
-      stars: 4,
+      stars: 5,
       quote:
-        'Big portions, honest prices. The Vietnamese iced coffee with the salted cream is something else. This place just gets it right.',
-      reviewer: 'Google Reviewer',
+        "A family owned restaurant with excellent food! The curry is spiced 1\u20135 so you can have it exactly as spicy as you want it! The Vietnamese Coffee was one of the best I\u2019ve had. A definite place to revisit!",
+      reviewer: 'Rosemary Joy Espinosa',
     },
   ]
 
@@ -605,7 +542,7 @@ function ReviewsStrip() {
                 </p>
                 <footer>
                   <cite className="font-body text-xs text-warmIvory/40 not-italic">
-                    — {review.reviewer}
+                    - {review.reviewer}
                   </cite>
                 </footer>
               </blockquote>
@@ -657,26 +594,14 @@ function OrderCtaBanner() {
             Order online for pickup or delivery. Fresh every time.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://phovietthai.orderfood.express/?menus=menu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-outline-ivory text-sm px-8 py-3.5 w-full sm:w-auto text-center"
-            >
-              Order Online
-            </a>
-            <a
-              href="https://phovietthai.orderfood.express/?menus=menu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-3.5 w-full sm:w-auto
-                         bg-warmIvory text-lacquerRed font-body font-semibold text-sm
-                         hover:bg-warmIvory-dark transition-colors duration-200"
-            >
-              Order Now
-            </a>
-          </div>
+          <a
+            href="https://phovietthai.orderfood.express/?menus=menu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline-ivory text-sm px-8 py-3.5 text-center"
+          >
+            Order Online
+          </a>
         </SectionEntrance>
       </div>
     </section>

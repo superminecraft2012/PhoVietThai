@@ -10,7 +10,6 @@ const navLinks = [
   { href: '/menu', label: 'Menu' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
-  { href: '/order', label: 'Order Online' },
 ]
 
 export function Navigation() {
@@ -42,7 +41,7 @@ export function Navigation() {
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           scrolled
             ? 'bg-warmIvory/95 backdrop-blur-sm shadow-[0_1px_0_rgba(0,0,0,0.06)]'
-            : 'bg-transparent'
+            : 'bg-warmIvory/90 backdrop-blur-sm'
         )}
       >
         <div className="container-site flex items-center justify-between h-16 md:h-20">
@@ -50,7 +49,7 @@ export function Navigation() {
           <Link
             href="/"
             className="font-display text-lg md:text-xl text-lacquerRed font-semibold tracking-tight hover:opacity-80 transition-opacity"
-            aria-label="Pho Viet Thai — Home"
+            aria-label="Pho Viet Thai - Home"
           >
             Pho Viet Thai
           </Link>

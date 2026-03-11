@@ -6,13 +6,12 @@ const navLinks = [
   { href: '/menu', label: 'Menu' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
-  { href: '/order', label: 'Order Online' },
 ]
 
 const socialLinks = [
   {
     label: 'Facebook',
-    href: '#',
+    href: 'https://www.facebook.com/profile.php?id=61580781386987',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
@@ -21,21 +20,12 @@ const socialLinks = [
   },
   {
     label: 'Instagram',
-    href: '#',
+    href: 'https://www.instagram.com/phovietthaitacoma/',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Yelp',
-    href: '#',
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M20.16 12.594l-4.995 1.433c-.96.275-1.92-.31-1.92-1.29V7.86c0-.98.96-1.565 1.92-1.29l4.995 1.434a1.42 1.42 0 0 1 0 2.59zM11.99 2.01C6.45 2.01 2 6.46 2 12s4.45 9.99 9.99 9.99S21.98 17.54 21.98 12 17.53 2.01 11.99 2.01z" />
       </svg>
     ),
   },
@@ -105,27 +95,6 @@ export function Footer() {
               </ul>
             </nav>
 
-            <div className="mt-8">
-              <h3 className="font-body text-xs font-semibold tracking-widest text-warmIvory/40 uppercase mb-4">
-                Order Online
-              </h3>
-              <ul className="space-y-2">
-                {[
-                  { label: 'Order Now', href: 'https://phovietthai.orderfood.express/?menus=menu' },
-                ].map(({ label, href }) => (
-                  <li key={label}>
-                    <a
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-body text-sm text-warmIvory/70 hover:text-turmericGold transition-colors duration-200"
-                    >
-                      {label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
 
           {/* Column 3 — Social + tagline */}

@@ -176,7 +176,7 @@ export default function MenuPage() {
           id="thai-curry"
           title="Thai Curry"
           icon={<ChiliIcon />}
-          description="Served over steamed jasmine rice. Spice level 0–5 — ask your server."
+          description="Served over steamed jasmine rice. Spice level 0–5. Ask your server."
         >
           {/* MENU DATA: Verified from client-provided menu — Thai Curry */}
           <MenuGrid items={thaiCurry} />
