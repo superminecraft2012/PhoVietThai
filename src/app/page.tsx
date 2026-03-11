@@ -449,7 +449,7 @@ function DrinksHighlight() {
           <SectionEntrance delay={0.15}>
             <div className="relative overflow-hidden">
               <Image
-                src="/images/drinks.webp"
+                src="/images/drinksnew.png"
                 alt="Featured drinks at Pho Viet Thai"
                 width={800}
                 height={600}
